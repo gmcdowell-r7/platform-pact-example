@@ -1,6 +1,0 @@
-com/rapid7/example/pact/server/demo/model/Animal.class
-com/rapid7/example/pact/server/demo/model/Animal$AnimalBuilder.class
-com/rapid7/example/pact/server/demo/ServletInitializer.class
-com/rapid7/example/pact/server/demo/service/AnimalService.class
-com/rapid7/example/pact/server/demo/controllers/AnimalController.class
-com/rapid7/example/pact/server/demo/DemoServer1Application.class
