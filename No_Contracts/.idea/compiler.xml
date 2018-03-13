@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Consumer Contract Client" />
+        <module name="demo" />
+        <module name="demo (1)" />
+        <module name="demo (1) (com.rapid7.example.pact.server)" />
+        <module name="demo (2)" />
+        <module name="demo (2) (com.rapid7.example.pact.server)" />
+        <module name="demo (3) (com.rapid7.example.pact.server)" />
+        <module name="Server Contract Client" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Consumer Contract Client" target="1.8" />
+      <module name="demo" target="1.8" />
+      <module name="demo (1)" target="1.8" />
+      <module name="demo (1) (com.rapid7.example.pact.server)" target="1.8" />
+      <module name="demo (2)" target="1.8" />
+      <module name="demo (2) (com.rapid7.example.pact.server)" target="1.8" />
+      <module name="demo (3) (com.rapid7.example.pact.server)" target="1.8" />
+      <module name="Server Contract Client" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

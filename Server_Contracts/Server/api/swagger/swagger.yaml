@@ -1,0 +1,116 @@
+swagger: '2.0'
+
+info:
+  version: "1.0.0"
+  title: Demo Server
+
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+host: 127.0.0.1:7001
+basePath: /v1
+
+paths:
+  /animal:
+    x-swagger-router-controller: AnimalController
+    post:
+      description: Creates an Animal
+      operationId: post
+      parameters:
+        - name: Animal
+          in: body
+          description: Animal
+          required: true
+          schema:
+            $ref: '#/definitions/Animal'
+      responses:
+        '201':
+          description: Animal created response
+          schema:
+            $ref: '#/definitions/Animal'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorResponse'
+  /animal/{id}:
+    x-swagger-router-controller: AnimalController
+    get:
+      description: Returns an Animal
+      operationId: get
+      parameters:
+        - name: id
+          in: path
+          description: Name of Animal
+          required: true
+          type: string
+          minLength: 1
+          maxLength: 25
+      responses:
+        '200':
+          description: Animal Response
+          schema:
+            $ref: '#/definitions/Animal'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorResponse'
+    delete:
+      description: deletes an animal
+      operationId: deleteAnimal
+      parameters:
+        - name: id
+          in: path
+          description: Name of Animal
+          required: true
+          type: string
+          minLength: 1
+          maxLength: 25
+      responses:
+        '204':
+          description:
+            "Success"
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorResponse'
+  /animals:
+    x-swagger-router-controller: AnimalController
+    get:
+      description: Returns all Animals
+      operationId: getAll
+      responses:
+        '200':
+          description: Animals Response
+          schema:
+            $ref: '#/definitions/Animals'
+        default:
+          description: unexpected error
+  /swagger:
+    x-swagger-pipe: swagger_raw
+definitions:
+
+  Animals:
+    type: array
+    items:
+      $ref: '#/definitions/Animal'
+
+  Animal:
+    type: object
+    properties:
+      id:
+        type: string
+      species:
+        type: string
+      color:
+        type: string
+
+  errorResponse:
+    type: object
+    required:
+      - message
+    properties:
+      message:
+        type: string

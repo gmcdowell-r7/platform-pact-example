@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Consumer_Contracts/Client/Consumer Contract Client.iml" filepath="$PROJECT_DIR$/../Consumer_Contracts/Client/Consumer Contract Client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Server_Contracts/Client/Server Contract Client.iml" filepath="$PROJECT_DIR$/../Server_Contracts/Client/Server Contract Client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Client V1/demo.iml" filepath="$PROJECT_DIR$/Client V1/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Client V2/demo (1).iml" filepath="$PROJECT_DIR$/Client V2/demo (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Server V1/demo (1) (com.rapid7.example.pact.server).iml" filepath="$PROJECT_DIR$/Server V1/demo (1) (com.rapid7.example.pact.server).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Server V2/demo (2) (com.rapid7.example.pact.server).iml" filepath="$PROJECT_DIR$/Server V2/demo (2) (com.rapid7.example.pact.server).iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Consumer_Contracts/Server/demo (3) (com.rapid7.example.pact.server).iml" filepath="$PROJECT_DIR$/../Consumer_Contracts/Server/demo (3) (com.rapid7.example.pact.server).iml" />
+    </modules>
+  </component>
+</project>

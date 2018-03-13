@@ -1,0 +1,165 @@
+{
+    "provider": {
+        "name": "AnimalApi"
+    },
+    "consumer": {
+        "name": "AnimalClient"
+    },
+    "interactions": [
+        {
+            "description": "A Get Request for all animal",
+            "request": {
+                "method": "GET",
+                "path": "/v1/animals"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": [
+                    {
+                        "id": "Tony",
+                        "species": "Tiger",
+                        "color": "Orange"
+                    },
+                    {
+                        "id": "Orville",
+                        "species": "Duck",
+                        "color": "Green"
+                    },
+                    {
+                        "id": "Elmo",
+                        "species": "Muppet",
+                        "color": "Red"
+                    },
+                    {
+                        "id": "Dory",
+                        "species": "Fish",
+                        "color": "Blue"
+                    },
+                    {
+                        "id": "Ben",
+                        "species": "Bear",
+                        "color": "Brown"
+                    },
+                    {
+                        "id": "Ed",
+                        "species": "Horse",
+                        "color": "Black"
+                    },
+                    {
+                        "id": "Flipper",
+                        "species": "Dolphin",
+                        "color": "Grey"
+                    },
+                    {
+                        "id": "Ryan",
+                        "species": "Velociraptor",
+                        "color": "Ginger"
+                    }
+                ]
+            },
+            "providerStates": [
+                {
+                    "name": "Some Animals"
+                }
+            ]
+        },
+        {
+            "description": "A Post for a new Animal",
+            "request": {
+                "method": "POST",
+                "path": "/v1/animal",
+                "body": {
+                    "id": "Buzz",
+                    "species": "Buzzard",
+                    "color": "Brown"
+                }
+            },
+            "response": {
+                "status": 201,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "id": "Buzz",
+                    "species": "Buzzard",
+                    "color": "Brown"
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "Some Animals"
+                }
+            ]
+        },
+        {
+            "description": "A Get Request for an animal",
+            "request": {
+                "method": "GET",
+                "path": "/v1/animal/Tony"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "id": "Tony",
+                    "species": "Tiger",
+                    "color": "Orange"
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "Some Animals"
+                }
+            ]
+        },
+        {
+            "description": "A Delete Request for an animal",
+            "request": {
+                "method": "DELETE",
+                "path": "/v1/animal/Dory"
+            },
+            "response": {
+                "status": 204,
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "Some Animals"
+                }
+            ]
+        },
+        {
+            "description": "A Get Request for a missing animal",
+            "request": {
+                "method": "GET",
+                "path": "/v1/animal/Gary"
+            },
+            "response": {
+                "status": 404,
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "No Animals"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.0"
+        }
+    }
+}
