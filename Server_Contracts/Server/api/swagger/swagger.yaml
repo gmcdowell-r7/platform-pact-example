@@ -53,6 +53,10 @@ paths:
           description: Animal Response
           schema:
             $ref: '#/definitions/Animal'
+        '404':
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/errorResponse'
         default:
           description: unexpected error
           schema:
@@ -88,8 +92,10 @@ paths:
             $ref: '#/definitions/Animals'
         default:
           description: unexpected error
+          
   /swagger:
     x-swagger-pipe: swagger_raw
+    
 definitions:
 
   Animals:

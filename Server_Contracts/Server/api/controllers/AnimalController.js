@@ -7,6 +7,7 @@ function get(req, res) {
     const id = req.swagger.params.id.value;
 
     let animal = animalService.getAnimal(id);
+    if (!animal) return res.status(404).json(animal);
 
     return res.status(200).json(animal);
 

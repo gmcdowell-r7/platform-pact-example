@@ -66,13 +66,13 @@ public class RestClient {
         System.out.println();
 
 
-        ResponseEntity<String> deleteResponse = new RestTemplate().exchange(
-            host + "animal/Dory",
-            HttpMethod.DELETE,
-            null,
-            String.class);
-
-        System.out.println(deleteResponse.getStatusCode());
+//        ResponseEntity<String> deleteResponse = new RestTemplate().exchange(
+//            host + "animal/Dory",
+////            HttpMethod.DELETE,
+////            null,
+////            String.class);
+//
+//        System.out.println(deleteResponse.getStatusCode());
 
         System.out.println("==========================================================");
         System.out.println("===================  Get All =============================");
